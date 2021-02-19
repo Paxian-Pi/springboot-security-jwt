@@ -12,7 +12,14 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfiguration {
 
-    @Bean
+    /*server.port=8443
+server.ssl.enabled=true
+server.ssl.key-store=src/main/resources/bootsecurity.p12
+server.ssl.key-store-password=bootsecurity
+server.ssl.keyStoreType=PKCS12
+server.ssl.keyAlias=bootsecurity*/
+
+    /*@Bean
     public ServletWebServerFactory servletContainer() {
         // Enable SSL Trafic
         TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory() {
@@ -33,11 +40,11 @@ public class AppConfiguration {
         return tomcat;
     }
 
-    /*
+    *//*
     We need to redirect from HTTP to HTTPS. Without SSL, this application used
     port 8082. With SSL it will use port 8443. So, any request for 8082 needs to be
     redirected to HTTPS on 8443.
-     */
+     *//*
     private Connector httpToHttpsRedirectConnector() {
         Connector connector = new Connector(TomcatServletWebServerFactory.DEFAULT_PROTOCOL);
         connector.setScheme("http");
@@ -45,5 +52,5 @@ public class AppConfiguration {
         connector.setSecure(false);
         connector.setRedirectPort(8443);
         return connector;
-    }
+    }*/
 }
