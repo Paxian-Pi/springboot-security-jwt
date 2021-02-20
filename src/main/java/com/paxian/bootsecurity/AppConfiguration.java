@@ -12,7 +12,14 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfiguration {
 
-    @Bean
+    /*server.port=8443
+server.ssl.enabled=true
+server.ssl.key-store=src/main/resources/bootsecurity.p12
+server.ssl.key-store-password=bootsecurity
+server.ssl.keyStoreType=PKCS12
+server.ssl.keyAlias=bootsecurity*/
+
+    /*@Bean
     public ServletWebServerFactory servletContainer() {
         // Enable SSL Trafic
         TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory() {
@@ -31,7 +38,7 @@ public class AppConfiguration {
         tomcat.addAdditionalTomcatConnectors(httpToHttpsRedirectConnector());
 
         return tomcat;
-    }
+    }*/
 
     /*
     We need to redirect from HTTP to HTTPS. Without SSL, this application used

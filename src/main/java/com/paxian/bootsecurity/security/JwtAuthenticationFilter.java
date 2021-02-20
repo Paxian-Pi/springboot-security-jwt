@@ -64,10 +64,10 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                 .withExpiresAt(new Date(System.currentTimeMillis() + JwtConstants.EXPIRATION_TIME))
                 .sign(HMAC512(JwtConstants.SECRET.getBytes()));
 
-        // Add token in response
+        // Add token to header
         response.addHeader(JwtConstants.HEADER, JwtConstants.TOKEN_PREFIX + token);
 
-        //Add token to body
+        // Render token in response body
         String Jw_Token = "{\"" + JwtConstants.HEADER + "\":\"" +JwtConstants.TOKEN_PREFIX + token + "\"}";
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
