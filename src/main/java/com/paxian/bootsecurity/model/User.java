@@ -15,7 +15,7 @@ public class User {
 
     @Id
     //@GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private String id;
 
     @Column(nullable = false)
     private String username;
@@ -39,7 +39,7 @@ public class User {
 
     protected User(){ }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
