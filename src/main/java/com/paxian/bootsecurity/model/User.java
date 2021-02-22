@@ -1,21 +1,17 @@
 package com.paxian.bootsecurity.model;
 
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
-
-//@Entity
-@Document(collection = "UserCollections")
+@Entity
+//@Document(collection = "UserCollections")
 public class User {
 
     @Id
-    //@GeneratedValue(strategy = GenerationType.AUTO)
-    private String id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
     @Column(nullable = false)
     private String username;
@@ -29,7 +25,7 @@ public class User {
 
     private String permissions = "";
 
-    public User(String username, String password, String roles, String permissions){
+    public User(String username, String password, String roles, String permissions) {
         this.username = username;
         this.password = password;
         this.roles = roles;
@@ -39,7 +35,7 @@ public class User {
 
     protected User(){ }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
