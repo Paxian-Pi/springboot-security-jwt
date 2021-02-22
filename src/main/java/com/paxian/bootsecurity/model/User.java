@@ -1,5 +1,7 @@
 package com.paxian.bootsecurity.model;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,11 +9,12 @@ import java.util.List;
 
 import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
 
-@Entity
+//@Entity
+@Document(collection = "UserCollections")
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    //@GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     @Column(nullable = false)
