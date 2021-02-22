@@ -23,7 +23,7 @@ public class DbInit implements CommandLineRunner {
 
         // Crete users
         User pax = new User("pax",passwordEncoder.encode("pax123"),"USER","");
-        User wendy = new User("wendy",passwordEncoder.encode("wendy123"),"MANAGER","ACCESS_TEST1");
+        User wendy = new User("wendy",passwordEncoder.encode("wendy123"),"ADMIN","ACCESS_TEST1");
         User admin = new User("admin",passwordEncoder.encode("admin123"),"ADMIN","ACCESS_TEST1,ACCESS_TEST2");
         User manager = new User("manager",passwordEncoder.encode("manager123"),"MANAGER","ACCESS_TEST1");
 
