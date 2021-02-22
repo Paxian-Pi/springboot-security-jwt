@@ -23,6 +23,7 @@ public class DbInit implements CommandLineRunner {
 
         // Crete users
         User pax = new User("pax",passwordEncoder.encode("pax123"),"USER","");
+        User wendy = new User("wendy",passwordEncoder.encode("wendy123"),"MANAGER","ACCESS_TEST1");
         User admin = new User("admin",passwordEncoder.encode("admin123"),"ADMIN","ACCESS_TEST1,ACCESS_TEST2");
         User manager = new User("manager",passwordEncoder.encode("manager123"),"MANAGER","ACCESS_TEST1");
 
@@ -30,7 +31,7 @@ public class DbInit implements CommandLineRunner {
         this.userRepository.deleteAll();
 
         // Save to db
-        List<User> users = Arrays.asList(pax,admin,manager);
+        List<User> users = Arrays.asList(pax,wendy,admin,manager);
         this.userRepository.saveAll(users);
     }
 }
