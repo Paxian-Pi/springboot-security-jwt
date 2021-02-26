@@ -29,7 +29,7 @@ public class PublicRestApiController {
     // Available to managers
     @GetMapping("management/reports")
     public String reports(){
-        return "Some report data";
+        return "{\"" + "message" + "\":\"" + "Some management report data" + "\"}";
     }
 
     // Available to ROLE_ADMIN
