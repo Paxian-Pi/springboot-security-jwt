@@ -1,5 +1,6 @@
 package com.paxian.bootsecurity.controller;
 
+import com.paxian.bootsecurity.security.JwtConstants;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +23,7 @@ public class PublicRestApiController {
     // Available to all authenticated users
     @GetMapping("all")
     public String test1(){
-        return "API for all users";
+        return "{\"" + "message" + "\":\"" + "API for all users" + "\"}";
     }
 
     // Available to managers
