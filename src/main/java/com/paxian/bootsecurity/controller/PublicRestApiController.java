@@ -10,7 +10,7 @@ import com.paxian.bootsecurity.model.User;
 import java.util.List;
 
 @RestController
-@RequestMapping("api/public")
+@RequestMapping("api/")
 @CrossOrigin
 public class PublicRestApiController {
     public UserRepository userRepository;
@@ -20,9 +20,9 @@ public class PublicRestApiController {
     }
 
     // Available to all authenticated users
-    @GetMapping("test")
+    @GetMapping("all")
     public String test1(){
-        return "API Test";
+        return "API for all users";
     }
 
     // Available to managers
