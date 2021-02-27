@@ -22,19 +22,19 @@ public class PublicRestApiController {
 
     // Available to all authenticated users
     @GetMapping("all")
-    public String test1(){
-        return "{\"" + "message" + "\":\"" + "API for all users" + "\"}";
+    public List<User> getUsers(){
+        return this.userRepository.findAll();
     }
 
     // Available to managers
     @GetMapping("management/reports")
-    public String reports(){
+    public String getManager(){
         return "{\"" + "message" + "\":\"" + "Some management report data" + "\"}";
     }
 
     // Available to ROLE_ADMIN
     @GetMapping("admin/users")
-    public List<User> users(){
-        return this.userRepository.findAll();
+    public String getAdmin(){
+        return "{\"" + "message" + "\":\"" + "API for admin users" + "\"}";
     }
 }
