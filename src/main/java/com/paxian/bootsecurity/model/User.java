@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Entity
-//@Document(collection = "UserCollections")
+//@Document(collection = "SpringCollections")
 public class User {
 
     @Id

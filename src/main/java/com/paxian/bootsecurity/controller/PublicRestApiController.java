@@ -1,12 +1,11 @@
 package com.paxian.bootsecurity.controller;
 
-import com.paxian.bootsecurity.security.JwtConstants;
+import com.paxian.bootsecurity.db.UserRepository;
+import com.paxian.bootsecurity.model.User;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import com.paxian.bootsecurity.db.UserRepository;
-import com.paxian.bootsecurity.model.User;
 
 import java.util.List;
 
